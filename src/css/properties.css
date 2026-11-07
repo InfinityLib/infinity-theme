@@ -84,50 +84,11 @@
   initial-value: 1;
 }
 
-@property --it-button-bg {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: transparent;
-}
-
-@property --it-button-fg {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: currentColor;
-}
-
-@property --it-button-border {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: transparent;
-}
-
-@property --it-button-height {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 2.5rem;
-}
-
-@property --it-input-bg {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: transparent;
-}
-
-@property --it-input-fg {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: currentColor;
-}
-
-@property --it-input-border {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: transparent;
-}
-
-@property --it-input-height {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 2.5rem;
-}
+/*
+ * Component knobs (--it-<family>-*) are intentionally NOT registered. The
+ * contract and value split binds them on an ancestor scope, so they must
+ * inherit. An @property registration with `inherits: false` would cut that
+ * chain and every consumer would resolve the knob to nothing (no border,
+ * no background). Registration stays reserved for the global semantic
+ * tokens above, where browser-side typing earns its place.
+ */
