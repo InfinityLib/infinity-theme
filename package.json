@@ -1,6 +1,6 @@
 {
   "name": "@infinitylib/infinity-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CSS-first design token and component theme. No build, no framework.",
   "license": "MIT",
   "repository": {
@@ -22,6 +22,7 @@
   },
   "style": "./src/css/index.css",
   "files": [
+    "index.d.ts",
     "src",
     "LICENSE",
     "README.md"
