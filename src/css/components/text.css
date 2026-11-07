@@ -1,0 +1,23 @@
+/*
+ * Text helper classes: lead, muted, mark, small.
+ */
+@layer it.variants {
+  .it-lead {
+    font-size: var(--it-font-size-4);
+    line-height: var(--it-line-height-relaxed);
+    color: var(--it-muted);
+  }
+
+  .it-muted {
+    color: var(--it-muted);
+  }
+
+  .it-mark {
+    color: var(--it-accent);
+    font-weight: var(--it-font-weight-semibold);
+  }
+
+  .it-small {
+    font-size: var(--it-font-size-2);
+  }
+}

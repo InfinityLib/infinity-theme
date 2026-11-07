@@ -1,0 +1,26 @@
+/*
+ * Fieldset and legend, plus the plain variant: no value layer.
+ */
+@layer it.base {
+  :where(.it-theme) :where(fieldset) {
+    border: var(--it-border-width) solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: var(--it-space-4);
+  }
+
+  :where(.it-theme) :where(legend) {
+    padding-inline: var(--it-space-2);
+    font-weight: var(--it-font-weight-semibold);
+  }
+}
+
+@layer it.variants {
+  .it-fieldset-plain {
+    border: 0;
+    padding: 0;
+  }
+
+  .it-fieldset-plain > legend {
+    padding-inline: 0;
+  }
+}

@@ -1,0 +1,5 @@
+@layer it.base {
+  :where(.it-theme) :where(strong, b) {
+    font-weight: var(--it-font-weight-semibold);
+  }
+}

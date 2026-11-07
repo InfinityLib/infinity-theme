@@ -1,0 +1,17 @@
+/*
+ * Label and the check wrapper (a label with its control): no value layer.
+ */
+@layer it.base {
+  :where(.it-theme) :where(label, .it-label) {
+    display: inline-block;
+    font-weight: var(--it-font-weight-medium);
+  }
+
+  :where(.it-theme) :where(.it-check) {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--it-space-2);
+    font-weight: var(--it-font-weight-normal);
+    cursor: pointer;
+  }
+}

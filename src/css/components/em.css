@@ -1,0 +1,5 @@
+@layer it.base {
+  :where(.it-theme) :where(em, i) {
+    font-style: italic;
+  }
+}

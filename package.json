@@ -1,0 +1,33 @@
+{
+  "name": "@infinitylib/infinity-theme",
+  "version": "0.1.0",
+  "description": "A CSS-first design token and component theme. No build, no framework.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfinityLib/infinity-theme.git"
+  },
+  "author": "FortyTwo_Dev",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/css/index.css"
+  },
+  "style": "./src/css/index.css",
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "css",
+    "design-tokens",
+    "theme",
+    "design-system",
+    "dark-mode"
+  ]
+}

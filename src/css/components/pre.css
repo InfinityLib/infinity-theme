@@ -1,0 +1,19 @@
+@layer it.base {
+  :where(.it-theme) :where(pre) {
+    font-family: var(--it-font-mono);
+    font-size: var(--it-font-size-2);
+    line-height: var(--it-line-height-normal);
+    background-color: var(--it-surface);
+    color: var(--it-surface-fg);
+    border: var(--it-border-width) solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: var(--it-space-4);
+    overflow: auto;
+  }
+
+  :where(.it-theme) :where(pre code) {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+}

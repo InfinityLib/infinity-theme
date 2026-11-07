@@ -1,0 +1,27 @@
+/*
+ * Image helpers: fluid, cover, contain and round variants.
+ */
+@layer it.variants {
+  .it-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .it-img-fluid {
+    width: 100%;
+    height: auto;
+  }
+
+  .it-img-cover {
+    object-fit: cover;
+  }
+
+  .it-img-contain {
+    object-fit: contain;
+  }
+
+  .it-img-round {
+    border-radius: var(--it-radius-full);
+  }
+}

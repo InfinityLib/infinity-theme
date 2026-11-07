@@ -1,0 +1,9 @@
+/*
+ * Textarea values: extension of the input skin.
+ */
+@layer it.tokens {
+  :where(.it-theme) {
+    --it-textarea-min-height: 6rem;
+    --it-textarea-padding-block: var(--it-space-2);
+  }
+}

@@ -1,0 +1,16 @@
+/*
+ * Radio: direct token consumption, low variance, no value layer.
+ */
+@layer it.base {
+  :where(.it-theme) :where(input[type='radio']) {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--it-accent);
+  }
+}
+
+@layer it.variants {
+  .it-radio-primary {
+    accent-color: var(--it-accent);
+  }
+}

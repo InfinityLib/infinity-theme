@@ -1,0 +1,10 @@
+/*
+ * Range: direct token consumption, no value layer.
+ */
+@layer it.base {
+  :where(.it-theme) :where(input[type='range'], .it-range) {
+    width: 100%;
+    accent-color: var(--it-accent);
+    cursor: pointer;
+  }
+}

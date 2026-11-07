@@ -1,0 +1,7 @@
+@layer it.base {
+  :where(.it-theme) :where(hr) {
+    border: 0;
+    border-top: var(--it-border-width) solid var(--it-border);
+    margin-block: var(--it-space-6);
+  }
+}

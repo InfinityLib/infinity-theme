@@ -1,0 +1,16 @@
+/*
+ * Link: plain links keep the foreground colour; the accent only marks the
+ * hover underline (the yellow reads poorly on small text).
+ */
+@layer it.base {
+  :where(.it-theme) :where(a) {
+    color: var(--it-fg);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  :where(.it-theme) :where(a:hover) {
+    text-decoration-color: var(--it-accent);
+    text-decoration-thickness: 2px;
+  }
+}

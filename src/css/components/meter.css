@@ -1,0 +1,14 @@
+/*
+ * Progress, meter and output: direct token consumption, no value layer.
+ */
+@layer it.base {
+  :where(.it-theme) :where(output) {
+    display: block;
+  }
+
+  :where(.it-theme) :where(progress, meter) {
+    width: 100%;
+    height: 0.5rem;
+    accent-color: var(--it-accent);
+  }
+}

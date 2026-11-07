@@ -1,0 +1,72 @@
+/*
+ * Select contract: extends the shared text field of input.css.
+ *
+ * The chevron image and its sizing are knobs (see style/select.css). The
+ * base-select picker internals keep direct semantic tokens: they are edge
+ * surface, not brand surface.
+ */
+@layer it.base {
+  :where(.it-theme) :where(select, .it-select) {
+    appearance: none;
+    padding-inline-end: calc(var(--it-input-padding) + var(--it-select-chevron-offset));
+    background-image: var(--it-select-chevron);
+    background-repeat: no-repeat;
+    background-position: right var(--it-input-padding) center;
+    background-size: var(--it-select-chevron-size);
+    cursor: pointer;
+  }
+
+  @supports (appearance: base-select) {
+    :where(.it-theme) :where(select, .it-select) {
+      appearance: base-select;
+      padding-inline-end: var(--it-input-padding);
+      background-image: none;
+    }
+
+    :where(.it-theme) :where(select, .it-select)::picker-icon {
+      color: var(--it-muted);
+      margin-inline-start: var(--it-space-2);
+      transition: rotate var(--it-input-duration) var(--it-input-easing);
+    }
+
+    :where(.it-theme) :where(select, .it-select):open::picker-icon {
+      rotate: 180deg;
+    }
+
+    :where(.it-theme) :where(select, .it-select)::picker(select) {
+      appearance: base-select;
+      max-height: 18rem;
+      overflow: auto;
+      border: var(--it-input-border-width) solid var(--it-border);
+      border-radius: var(--it-input-radius);
+      background: var(--it-bg);
+      color: var(--it-fg);
+      padding: var(--it-space-1);
+    }
+
+    :where(.it-theme) :where(select, .it-select) option {
+      border-radius: var(--it-radius);
+      background: transparent;
+      color: var(--it-fg);
+      padding: var(--it-space-2) var(--it-space-3);
+    }
+
+    :where(.it-theme) :where(select, .it-select) option:hover,
+    :where(.it-theme) :where(select, .it-select) option:focus {
+      background: var(--it-surface);
+      color: var(--it-fg);
+    }
+
+    :where(.it-theme) :where(select, .it-select) option:checked {
+      background: var(--it-accent);
+      color: var(--it-accent-fg);
+      font-weight: var(--it-font-weight-semibold);
+    }
+
+    :where(.it-theme) :where(select, .it-select) option::checkmark {
+      content: '✓';
+      margin-inline-start: auto;
+      color: var(--it-accent-fg);
+    }
+  }
+}

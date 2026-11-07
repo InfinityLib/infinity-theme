@@ -1,0 +1,115 @@
+/*
+ * Button contract.
+ *
+ * Structure only: every design value is a --it-button-* knob bound in
+ * style/button.css. Variants turn knobs; they never hold values.
+ */
+@layer it.base {
+  :where(.it-theme) :where(button, .it-btn) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--it-button-gap);
+    height: var(--it-button-height);
+    padding-inline: var(--it-button-padding);
+    border: var(--it-button-border-width) solid var(--it-button-border-color);
+    border-radius: var(--it-button-radius);
+    background-color: var(--it-button-bg);
+    color: var(--it-button-fg);
+    font-size: var(--it-button-font-size);
+    font-weight: var(--it-button-font-weight);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color var(--it-button-duration) var(--it-button-easing),
+      color var(--it-button-duration) var(--it-button-easing),
+      border-color var(--it-button-duration) var(--it-button-easing),
+      opacity var(--it-button-duration) var(--it-button-easing);
+  }
+
+  :where(.it-theme) :where(button, .it-btn):hover:not(:disabled) {
+    opacity: var(--it-button-hover-opacity);
+  }
+
+  :where(.it-theme) :where(button, .it-btn):focus-visible {
+    outline: var(--it-button-focus-width) solid var(--it-button-focus-ring);
+    outline-offset: var(--it-button-focus-offset);
+  }
+
+  :where(.it-theme) :where(button, .it-btn):disabled {
+    background-color: var(--it-button-disabled-bg);
+    color: var(--it-button-disabled-fg);
+    border-color: var(--it-button-disabled-border);
+    cursor: not-allowed;
+    opacity: var(--it-button-disabled-opacity);
+  }
+}
+
+@layer it.variants {
+  .it-btn-secondary {
+    --it-button-bg: var(--it-button-secondary-bg);
+    --it-button-fg: var(--it-button-secondary-fg);
+    --it-button-border-color: var(--it-button-secondary-border);
+  }
+
+  .it-btn-ghost {
+    --it-button-bg: var(--it-button-ghost-bg);
+    --it-button-fg: var(--it-button-ghost-fg);
+    --it-button-border-color: var(--it-button-ghost-border);
+  }
+
+  .it-btn-ghost:hover:not(:disabled) {
+    --it-button-bg: var(--it-button-ghost-hover-bg);
+  }
+
+  .it-btn-primary {
+    --it-button-bg: var(--it-button-primary-bg);
+    --it-button-fg: var(--it-button-primary-fg);
+    --it-button-border-color: var(--it-button-primary-border);
+  }
+
+  .it-btn-danger {
+    --it-button-bg: var(--it-button-danger-bg);
+    --it-button-fg: var(--it-button-danger-fg);
+    --it-button-border-color: var(--it-button-danger-border);
+  }
+
+  .it-btn-link {
+    --it-button-bg: var(--it-button-link-bg);
+    --it-button-fg: var(--it-button-link-fg);
+    --it-button-border-color: var(--it-button-link-border);
+    --it-button-padding: var(--it-button-link-padding);
+    height: var(--it-button-link-height);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .it-btn-sm {
+    --it-button-height: var(--it-button-sm-height);
+    --it-button-padding: var(--it-button-sm-padding);
+    --it-button-font-size: var(--it-button-sm-font-size);
+  }
+
+  .it-btn-md {
+    --it-button-height: var(--it-button-md-height);
+    --it-button-padding: var(--it-button-md-padding);
+    --it-button-font-size: var(--it-button-md-font-size);
+  }
+
+  .it-btn-lg {
+    --it-button-height: var(--it-button-lg-height);
+    --it-button-padding: var(--it-button-lg-padding);
+    --it-button-font-size: var(--it-button-lg-font-size);
+  }
+
+  .it-btn-block {
+    width: 100%;
+  }
+
+  .it-btn-icon {
+    --it-button-padding: var(--it-button-icon-padding);
+    width: var(--it-button-height);
+    flex: none;
+  }
+}

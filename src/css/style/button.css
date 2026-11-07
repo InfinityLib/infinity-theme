@@ -1,0 +1,65 @@
+/*
+ * Button values: the skin of components/button.css.
+ *
+ * A rebrand edits this file only. Bindings sit in it.tokens so a skin can
+ * cascade below the structure layers.
+ */
+@layer it.tokens {
+  :where(.it-theme) {
+    --it-button-gap: var(--it-space-2);
+    --it-button-height: var(--it-control-height-md);
+    --it-button-padding: var(--it-control-padding-md);
+    --it-button-bg: var(--it-surface);
+    --it-button-fg: var(--it-surface-fg);
+    --it-button-border-color: var(--it-border);
+    --it-button-border-width: var(--it-border-width);
+    --it-button-radius: var(--it-radius);
+    --it-button-font-size: var(--it-font-size-3);
+    --it-button-font-weight: var(--it-font-weight-medium);
+    --it-button-duration: var(--it-duration);
+    --it-button-easing: var(--it-easing-standard);
+    --it-button-hover-opacity: 0.9;
+    --it-button-focus-width: var(--it-focus-width);
+    --it-button-focus-ring: var(--it-focus-ring);
+    --it-button-focus-offset: var(--it-focus-offset);
+    --it-button-disabled-bg: var(--it-disabled-bg);
+    --it-button-disabled-fg: var(--it-disabled-fg);
+    --it-button-disabled-border: var(--it-disabled-border);
+    --it-button-disabled-opacity: var(--it-opacity);
+
+    --it-button-secondary-bg: var(--it-surface);
+    --it-button-secondary-fg: var(--it-surface-fg);
+    --it-button-secondary-border: var(--it-border);
+
+    --it-button-ghost-bg: transparent;
+    --it-button-ghost-fg: var(--it-fg);
+    --it-button-ghost-border: transparent;
+    --it-button-ghost-hover-bg: var(--it-surface);
+
+    --it-button-primary-bg: var(--it-accent);
+    --it-button-primary-fg: var(--it-accent-fg);
+    --it-button-primary-border: var(--it-accent);
+
+    --it-button-danger-bg: var(--it-danger);
+    --it-button-danger-fg: var(--it-danger-fg);
+    --it-button-danger-border: var(--it-danger);
+
+    --it-button-link-bg: transparent;
+    --it-button-link-fg: var(--it-accent);
+    --it-button-link-border: transparent;
+    --it-button-link-padding: 0;
+    --it-button-link-height: auto;
+
+    --it-button-sm-height: var(--it-control-height-sm);
+    --it-button-sm-padding: var(--it-control-padding-sm);
+    --it-button-sm-font-size: var(--it-font-size-2);
+    --it-button-md-height: var(--it-control-height-md);
+    --it-button-md-padding: var(--it-control-padding-md);
+    --it-button-md-font-size: var(--it-font-size-3);
+    --it-button-lg-height: var(--it-control-height-lg);
+    --it-button-lg-padding: var(--it-control-padding-lg);
+    --it-button-lg-font-size: var(--it-font-size-4);
+
+    --it-button-icon-padding: 0;
+  }
+}

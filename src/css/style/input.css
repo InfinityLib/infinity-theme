@@ -1,0 +1,37 @@
+/*
+ * Text field values: the skin of the input family (input, textarea, select).
+ * Rebrand here; components/input.css stays untouched.
+ */
+@layer it.tokens {
+  :where(.it-theme) {
+    --it-input-bg: var(--it-surface);
+    --it-input-fg: var(--it-surface-fg);
+    --it-input-border: var(--it-border);
+    --it-input-border-width: var(--it-border-width);
+    --it-input-radius: var(--it-radius);
+    --it-input-height: var(--it-control-height-md);
+    --it-input-padding: var(--it-control-padding-md);
+    --it-input-font-size: var(--it-font-size-3);
+    --it-input-duration: var(--it-duration);
+    --it-input-easing: var(--it-easing-standard);
+    --it-input-placeholder: var(--it-muted);
+    --it-input-focus-width: var(--it-focus-width);
+    --it-input-focus-ring: var(--it-focus-ring);
+    --it-input-focus-offset: var(--it-focus-offset);
+    --it-input-disabled-bg: var(--it-disabled-bg);
+    --it-input-disabled-fg: var(--it-disabled-fg);
+    --it-input-disabled-border: var(--it-disabled-border);
+    --it-input-invalid-border: var(--it-danger);
+    --it-input-primary-border: var(--it-accent);
+
+    --it-input-sm-height: var(--it-control-height-sm);
+    --it-input-sm-padding: var(--it-control-padding-sm);
+    --it-input-sm-font-size: var(--it-font-size-2);
+    --it-input-md-height: var(--it-control-height-md);
+    --it-input-md-padding: var(--it-control-padding-md);
+    --it-input-md-font-size: var(--it-font-size-3);
+    --it-input-lg-height: var(--it-control-height-lg);
+    --it-input-lg-padding: var(--it-control-padding-lg);
+    --it-input-lg-font-size: var(--it-font-size-4);
+  }
+}

@@ -1,0 +1,23 @@
+/*
+ * Demonstration skin: a cold rebrand of the button and field families.
+ *
+ * Proof of the contract/values split: this file only rebinds knobs that
+ * components/button.css and components/input.css consume. It repeats no
+ * selector from the contracts and touches no structure.
+ */
+@layer it.tokens {
+  :where(.it-theme) {
+    --it-button-bg: oklch(30% 0.04 250);
+    --it-button-fg: oklch(98% 0.01 250);
+    --it-button-border-color: oklch(45% 0.06 250);
+    --it-button-radius: 0.5rem;
+    --it-button-primary-bg: oklch(70% 0.14 230);
+    --it-button-primary-fg: oklch(15% 0.02 250);
+    --it-button-hover-opacity: 0.85;
+
+    --it-input-bg: oklch(20% 0.03 250);
+    --it-input-fg: oklch(98% 0.01 250);
+    --it-input-border: oklch(45% 0.08 250);
+    --it-input-radius: 0.5rem;
+  }
+}

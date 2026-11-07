@@ -1,0 +1,112 @@
+/*
+ * Text field contract, shared by input, textarea and select.
+ *
+ * Structure only: design values are --it-input-* knobs bound in
+ * style/input.css. Select and textarea specific contracts extend this family
+ * in select.css and textarea.css.
+ */
+@layer it.base {
+  :where(.it-theme)
+    :where(
+      input:not([type='checkbox']):not([type='radio']):not([type='range']),
+      textarea,
+      select,
+      .it-input,
+      .it-textarea,
+      .it-select
+    ) {
+    width: 100%;
+    min-width: 0;
+    height: var(--it-input-height);
+    padding-inline: var(--it-input-padding);
+    border: var(--it-input-border-width) solid var(--it-input-border);
+    border-radius: var(--it-input-radius);
+    background-color: var(--it-input-bg);
+    color: var(--it-input-fg);
+    font-size: var(--it-input-font-size);
+    transition:
+      border-color var(--it-input-duration) var(--it-input-easing),
+      background-color var(--it-input-duration) var(--it-input-easing);
+  }
+
+  :where(.it-theme) :where(input, textarea)::placeholder {
+    color: var(--it-input-placeholder);
+    opacity: 1;
+  }
+
+  :where(.it-theme)
+    :where(
+      input:not([type='checkbox']):not([type='radio']):not([type='range']),
+      textarea,
+      select,
+      .it-input,
+      .it-textarea,
+      .it-select
+    ):focus-visible {
+    outline: var(--it-input-focus-width) solid var(--it-input-focus-ring);
+    outline-offset: var(--it-input-focus-offset);
+  }
+
+  :where(.it-theme)
+    :where(
+      input:not([type='checkbox']):not([type='radio']):not([type='range']),
+      textarea,
+      select,
+      .it-input,
+      .it-textarea,
+      .it-select
+    ):disabled {
+    background-color: var(--it-input-disabled-bg);
+    color: var(--it-input-disabled-fg);
+    border-color: var(--it-input-disabled-border);
+    cursor: not-allowed;
+  }
+
+  /* An explicit aria-invalid state turns the same knob as the class. */
+  :where(.it-theme)
+    :where(
+      input[aria-invalid='true'],
+      textarea[aria-invalid='true'],
+      select[aria-invalid='true']
+    ) {
+    --it-input-border: var(--it-input-invalid-border);
+  }
+}
+
+@layer it.variants {
+  .it-input-primary,
+  .it-select-primary,
+  .it-textarea-primary {
+    --it-input-border: var(--it-input-primary-border);
+  }
+
+  .it-input-invalid,
+  .it-select-invalid,
+  .it-textarea-invalid {
+    --it-input-border: var(--it-input-invalid-border);
+  }
+
+  .it-input-sm,
+  .it-select-sm,
+  .it-textarea-sm {
+    --it-input-height: var(--it-input-sm-height);
+    --it-input-padding: var(--it-input-sm-padding);
+    --it-input-font-size: var(--it-input-sm-font-size);
+  }
+
+  .it-input-md,
+  .it-select-md,
+  .it-textarea-md {
+    --it-input-height: var(--it-input-md-height);
+    --it-input-padding: var(--it-input-md-padding);
+    --it-input-font-size: var(--it-input-md-font-size);
+  }
+
+  .it-input-lg,
+  .it-select-lg,
+  .it-textarea-lg {
+    --it-input-height: var(--it-input-lg-height);
+    --it-input-padding: var(--it-input-lg-padding);
+    --it-input-font-size: var(--it-input-lg-font-size);
+  }
+}

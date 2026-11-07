@@ -1,0 +1,7 @@
+@layer it.base {
+  :where(.it-theme) :where(mark) {
+    background-color: var(--it-warning);
+    color: var(--it-warning-fg);
+    padding-inline: var(--it-space-1);
+  }
+}

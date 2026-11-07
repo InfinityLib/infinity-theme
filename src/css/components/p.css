@@ -1,0 +1,6 @@
+@layer it.base {
+  :where(.it-theme) :where(p, .it-p) {
+    margin-block: 0 var(--it-space-4);
+    line-height: var(--it-line-height-relaxed);
+  }
+}

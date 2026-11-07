@@ -1,0 +1,17 @@
+/*
+ * Select values: extension of the input skin.
+ *
+ * The chevron is a derived value: it cannot follow the tokens, it embeds a
+ * colour in the data URI, so each mode carries its own image.
+ */
+@layer it.tokens {
+  :where(.it-theme) {
+    --it-select-chevron-offset: 1.25rem;
+    --it-select-chevron-size: 0.75rem;
+    --it-select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23525252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m2 4 4 4 4-4'/%3E%3C/svg%3E");
+  }
+
+  :where([data-theme='dark']) {
+    --it-select-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23a3a3a3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m2 4 4 4 4-4'/%3E%3C/svg%3E");
+  }
+}

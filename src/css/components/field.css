@@ -1,0 +1,23 @@
+/*
+ * Field wrapper: label, control, hint and error slots. No value layer.
+ */
+@layer it.variants {
+  .it-field {
+    display: grid;
+    gap: var(--it-space-2);
+  }
+
+  .it-field-label {
+    font-weight: var(--it-font-weight-medium);
+  }
+
+  .it-field-hint {
+    color: var(--it-muted);
+    font-size: var(--it-font-size-2);
+  }
+
+  .it-field-error {
+    color: var(--it-danger);
+    font-size: var(--it-font-size-2);
+  }
+}

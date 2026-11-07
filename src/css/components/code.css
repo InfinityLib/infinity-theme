@@ -1,0 +1,11 @@
+@layer it.base {
+  :where(.it-theme) :where(code, kbd, samp) {
+    font-family: var(--it-font-mono);
+    font-size: 0.9em;
+    background-color: var(--it-surface);
+    color: var(--it-surface-fg);
+    border: var(--it-border-width) solid var(--it-border);
+    border-radius: var(--it-radius-sm);
+    padding: 0.1em 0.35em;
+  }
+}

@@ -1,0 +1,8 @@
+@layer it.base {
+  :where(.it-theme) :where(h2, .it-h2) {
+    font-size: var(--it-font-size-6);
+    font-weight: var(--it-font-weight-semibold);
+    line-height: var(--it-line-height-tight);
+    margin-block: 0 var(--it-space-3);
+  }
+}

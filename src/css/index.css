@@ -1,0 +1,55 @@
+@layer it.tokens, it.base, it.variants, it.overrides;
+
+@import './properties.css';
+@import './tokens/primitives.css';
+@import './tokens/semantic.css';
+@import './tokens/themes/light.css';
+@import './tokens/themes/dark.css';
+
+@import './base/reset.css';
+@import './base/accessibility.css';
+
+/*
+ * Values first: the skins bind the knobs the contracts consume. Layer-wise
+ * they sit in it.tokens, so file order only matters between style files that
+ * rebind the same knob.
+ */
+@import './style/button.css';
+@import './style/input.css';
+@import './style/textarea.css';
+@import './style/select.css';
+
+/* Contracts: one file per component, one knob namespace per family. */
+@import './components/button.css';
+@import './components/input.css';
+@import './components/textarea.css';
+@import './components/select.css';
+@import './components/checkbox.css';
+@import './components/radio.css';
+@import './components/range.css';
+@import './components/label.css';
+@import './components/fieldset.css';
+@import './components/meter.css';
+@import './components/field.css';
+@import './components/choice.css';
+@import './components/nav-link.css';
+@import './components/text.css';
+@import './components/img.css';
+@import './components/a.css';
+@import './components/h1.css';
+@import './components/h2.css';
+@import './components/h3.css';
+@import './components/h4.css';
+@import './components/h5.css';
+@import './components/h6.css';
+@import './components/p.css';
+@import './components/strong.css';
+@import './components/em.css';
+@import './components/small.css';
+@import './components/mark.css';
+@import './components/code.css';
+@import './components/pre.css';
+@import './components/blockquote.css';
+@import './components/hr.css';
+@import './components/table.css';
+@import './components/figure.css';

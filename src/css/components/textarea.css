@@ -1,0 +1,11 @@
+/*
+ * Textarea contract: extends the shared text field of input.css.
+ */
+@layer it.base {
+  :where(.it-theme) :where(textarea, .it-textarea) {
+    height: auto;
+    min-height: var(--it-textarea-min-height);
+    padding-block: var(--it-textarea-padding-block);
+    resize: vertical;
+  }
+}
