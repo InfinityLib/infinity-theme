@@ -15,7 +15,10 @@
     "**/*.css"
   ],
   "exports": {
-    ".": "./src/css/index.css"
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/css/index.css"
+    }
   },
   "style": "./src/css/index.css",
   "files": [
