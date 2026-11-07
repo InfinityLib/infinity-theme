@@ -34,11 +34,17 @@ import '@infinitylib/infinity-theme'
 
 ```css
 /* application css */
-:where(.it-theme) {
+:root {
   --it-accent: #ffdf00;
   --it-accent-fg: #000000;
 }
 ```
+
+The library declares its semantic tokens on `:root`, which carries a
+specificity of (0,1,0). An override must match it: a plain `:root` block
+wins by source order (your stylesheet comes after the import), and
+`:root[data-accent='...']` wins on specificity, independently of the
+order. A `:where(...)` scope silently loses to the library.
 
 The library stays accent-agnostic both in values and in behaviour. If the
 brand accent is too bright to work as text on light backgrounds, the
@@ -88,12 +94,16 @@ through the token cascade:
 
 ```css
 @layer it.tokens {
-  :where([data-theme='midnight']) {
+  :root[data-theme='midnight'] {
     color-scheme: dark;
     /* the token set below */
   }
 }
 ```
+
+Scope a custom theme on `:root[data-theme='...']`: it outranks the
+library's plain `:root` and `[data-theme='light|dark']` bindings on
+specificity, so the declaration order cannot break your theme.
 
 A complete theme binds the full semantic set:
 
