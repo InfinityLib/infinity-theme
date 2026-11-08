@@ -1,6 +1,6 @@
 {
   "name": "@infinitylib/infinity-theme",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A CSS-first design token and component theme. No build, no framework.",
   "license": "MIT",
   "repository": {

@@ -11,6 +11,14 @@
     font-weight: var(--it-font-weight-medium);
   }
 
+  /* The heading row of a field: the label beside the help control. Component
+     micro-layout, not page arrangement. */
+  .it-field-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--it-space-2);
+  }
+
   .it-field-hint {
     color: var(--it-muted);
     font-size: var(--it-font-size-2);
